@@ -1,0 +1,7 @@
+Filename,RawURL
+AGCAResponse.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-canada/master/address-geocode-canada-dot-net/REST/AGCAResponse.cs
+GetGeoLocation.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-canada/master/address-geocode-canada-dot-net/REST/GetGeoLocation.cs
+GetGeoLocationByMunicipalityProvince.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-canada/master/address-geocode-canada-dot-net/REST/GetGeoLocationByMunicipalityProvince.cs
+GetPostalCodeInfo.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-canada/master/address-geocode-canada-dot-net/REST/GetPostalCodeInfo.cs
+Helper.cs,https://raw.githubusercontent.com/ServiceObjects/address-geocode-canada/master/address-geocode-canada-dot-net/REST/Helper.cs
+readme.md,https://raw.githubusercontent.com/ServiceObjects/address-geocode-canada/master/address-geocode-canada-dot-net/REST/readme.md

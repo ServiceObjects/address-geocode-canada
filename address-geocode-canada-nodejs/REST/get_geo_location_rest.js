@@ -75,14 +75,13 @@ const GetGeoLocationClient = {
      * Asynchronously invokes the GetGeoLocation API endpoint, attempting the primary endpoint
      * first and falling back to the backup if the response is invalid (Error.Number == '4') in live mode.
      * </summary>
-     * @param {Object} input - Input parameters for the API call.
-     * @param {string} input.Address - Address line of the address to geocode (e.g., "123 Main Street"). Required.
-     * @param {string} input.Municipality - The municipality of the address to geocode (e.g., "Cayuga"). Optional if postal code is provided.
-     * @param {string} input.Province - The province of the address to geocode (e.g., "ON"). Optional if postal code is provided.
-     * @param {string} input.PostalCode - The postal code of the address to geocode. Optional if municipality and province are provided.
-     * @param {string} input.LicenseKey - Your license key to use the service.
-     * @param {boolean} input.IsLive - Value to determine whether to use the live or trial servers.
-     * @param {number} input.TimeoutSeconds - Timeout, in seconds, for the call to the service.
+     * @param {string} Address - Address line of the address to geocode (e.g., "123 Main Street"). Required.
+     * @param {string} Municipality - The municipality of the address to geocode (e.g., "Cayuga"). Optional if postal code is provided.
+     * @param {string} Province - The province of the address to geocode (e.g., "ON"). Optional if postal code is provided.
+     * @param {string} PostalCode - The postal code of the address to geocode. Optional if municipality and province are provided.
+     * @param {string} LicenseKey - Your license key to use the service.
+     * @param {boolean} IsLive - Value to determine whether to use the live or trial servers.
+     * @param {number} TimeoutSeconds - Timeout, in seconds, for the call to the service.
      * @returns {Promise<GetGeoLocationResponse>} - A promise that resolves to a GetGeoLocationResponse object.
      */
     async invokeAsync(Address, Municipality, Province, PostalCode, LicenseKey, IsLive = true, TimeoutSeconds = 15) {
@@ -91,15 +90,15 @@ const GetGeoLocationClient = {
             Municipality,
             Province,
             PostalCode,
-            LicenseKey: input.LicenseKey
+            LicenseKey: LicenseKey
         };
 
-        const url = buildUrl(params, input.IsLive ? LiveBaseUrl : TrialBaseUrl);
-        let response = await httpGet(url, input.TimeoutSeconds);
+        const url = buildUrl(params, IsLive ? LiveBaseUrl : TrialBaseUrl);
+        let response = await httpGet(url, TimeoutSeconds);
 
-        if (input.IsLive && !isValid(response)) {
+        if (IsLive && !isValid(response)) {
             const fallbackUrl = buildUrl(params, BackupBaseUrl);
-            const fallbackResponse = await httpGet(fallbackUrl, input.TimeoutSeconds);
+            const fallbackResponse = await httpGet(fallbackUrl, TimeoutSeconds);
             return fallbackResponse;
         }
         return response;
@@ -110,14 +109,13 @@ const GetGeoLocationClient = {
      * Synchronously invokes the GetGeoLocation API endpoint by wrapping the async call
      * and awaiting its result immediately.
      * </summary>
-     * @param {Object} input - Input parameters for the API call.
-     * @param {string} input.Address - Address line of the address to geocode (e.g., "123 Main Street"). Required.
-     * @param {string} input.Municipality - The municipality of the address to geocode (e.g., "Cayuga"). Optional if postal code is provided.
-     * @param {string} input.Province - The province of the address to geocode (e.g., "ON"). Optional if postal code is provided.
-     * @param {string} input.PostalCode - The postal code of the address to geocode. Optional if municipality and province are provided.
-     * @param {string} input.LicenseKey - Your license key to use the service.
-     * @param {boolean} input.IsLive - Value to determine whether to use the live or trial servers.
-     * @param {number} input.TimeoutSeconds - Timeout, in seconds, for the call to the service.
+     * @param {string} Address - Address line of the address to geocode (e.g., "123 Main Street"). Required.
+     * @param {string} Municipality - The municipality of the address to geocode (e.g., "Cayuga"). Optional if postal code is provided.
+     * @param {string} Province - The province of the address to geocode (e.g., "ON"). Optional if postal code is provided.
+     * @param {string} PostalCode - The postal code of the address to geocode. Optional if municipality and province are provided.
+     * @param {string} LicenseKey - Your license key to use the service.
+     * @param {boolean} IsLive - Value to determine whether to use the live or trial servers.
+     * @param {number} TimeoutSeconds - Timeout, in seconds, for the call to the service.
      * @returns {GetGeoLocationResponse} - A GetGeoLocationResponse object with geocoding details or an error.
      */
     invoke(Address, Municipality, Province, PostalCode, LicenseKey, IsLive = true, TimeoutSeconds = 15) {

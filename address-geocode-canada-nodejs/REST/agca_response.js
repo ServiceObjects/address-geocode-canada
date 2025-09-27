@@ -3,11 +3,11 @@
  */
 export class GetGeoLocationInput {
     constructor(data = {}) {
-        this.Address = data.Address || null;
-        this.Municipality = data.Municipality || null;
-        this.Province = data.Province || null;
-        this.PostalCode = data.PostalCode || null;
-        this.LicenseKey = data.LicenseKey || null;
+        this.Address = data.Address;
+        this.Municipality = data.Municipality;
+        this.Province = data.Province;
+        this.PostalCode = data.PostalCode;
+        this.LicenseKey = data.LicenseKey;
         this.IsLive = data.IsLive !== undefined ? data.IsLive : true;
         this.TimeoutSeconds = data.TimeoutSeconds !== undefined ? data.TimeoutSeconds : 15;
     }
@@ -22,8 +22,8 @@ export class GetGeoLocationInput {
  */
 export class GetPostalCodeInfoInput {
     constructor(data = {}) {
-        this.PostalCode = data.PostalCode || null;
-        this.LicenseKey = data.LicenseKey || null;
+        this.PostalCode = data.PostalCode;
+        this.LicenseKey = data.LicenseKey;
         this.IsLive = data.IsLive !== undefined ? data.IsLive : true;
         this.TimeoutSeconds = data.TimeoutSeconds !== undefined ? data.TimeoutSeconds : 15;
     }
@@ -38,9 +38,9 @@ export class GetPostalCodeInfoInput {
  */
 export class GetGeoLocationByMunicipalityProvinceInput {
     constructor(data = {}) {
-        this.Municipality = data.Municipality || null;
-        this.Province = data.Province || null;
-        this.LicenseKey = data.LicenseKey || null;
+        this.Municipality = data.Municipality;
+        this.Province = data.Province;
+        this.LicenseKey = data.LicenseKey;
         this.IsLive = data.IsLive !== undefined ? data.IsLive : true;
         this.TimeoutSeconds = data.TimeoutSeconds !== undefined ? data.TimeoutSeconds : 15;
     }
@@ -55,9 +55,9 @@ export class GetGeoLocationByMunicipalityProvinceInput {
  */
 export class Error {
     constructor(data = {}) {
-        this.Desc = data.Desc || null;
-        this.Number = data.Number || null;
-        this.Location = data.Location || null;
+        this.Desc = data.Desc;
+        this.Number = data.Number;
+        this.Location = data.Location;
     }
 
     toString() {
@@ -71,10 +71,10 @@ export class Error {
  */
 export class GetGeoLocationResponse {
     constructor(data = {}) {
-        this.Latitude = data.Latitude || null;
-        this.Longitude = data.Longitude || null;
-        this.PostalCode = data.PostalCode || null;
-        this.MatchCode = data.MatchCode || null;
+        this.Latitude = data.Latitude;
+        this.Longitude = data.Longitude;
+        this.PostalCode = data.PostalCode;
+        this.MatchCode = data.MatchCode;
         this.Error = data.Error ? new Error(data.Error) : null;
     }
 
@@ -89,15 +89,15 @@ export class GetGeoLocationResponse {
  */
 export class GetPostalCodeInfoResponse {
     constructor(data = {}) {
-        this.Latitude = data.Latitude || null;
-        this.Longitude = data.Longitude || null;
-        this.PostalCode = data.PostalCode || null;
-        this.TimeZone = data.TimeZone || null;
-        this.DST = data.DST || null;
-        this.AreaCode = data.AreaCode || null;
-        this.City = data.City || null;
-        this.CityPopulation = data.CityPopulation || null;
-        this.Province = data.Province || null;
+        this.Latitude = data.Latitude;
+        this.Longitude = data.Longitude;
+        this.PostalCode = data.PostalCode;
+        this.TimeZone = data.TimeZone;
+        this.DST = data.DST;
+        this.AreaCode = data.AreaCode;
+        this.City = data.City;
+        this.CityPopulation = data.CityPopulation;
+        this.Province = data.Province;
         this.Error = data.Error ? new Error(data.Error) : null;
     }
 
@@ -112,9 +112,9 @@ export class GetPostalCodeInfoResponse {
  */
 export class GetGeoLocationByMunicipalityProvinceResponse {
     constructor(data = {}) {
-        this.Latitude = data.Latitude || null;
-        this.Longitude = data.Longitude || null;
-        this.PostalCode = data.PostalCode || null;
+        this.Latitude = data.Latitude;
+        this.Longitude = data.Longitude;
+        this.PostalCode = data.PostalCode;
         this.Error = data.Error ? new Error(data.Error) : null;
     }
 

@@ -15,7 +15,6 @@ def get_geo_location_rest_sdk_go(is_live: bool, license_key: str) -> None:
     municipality = "Ottawa"
     province = "ON"
     postal_code = "K1Z 7K4"
-    timeout_seconds = 15
 
     print("\r\n* Input *\r\n")
     print(f"Address     : {address}")

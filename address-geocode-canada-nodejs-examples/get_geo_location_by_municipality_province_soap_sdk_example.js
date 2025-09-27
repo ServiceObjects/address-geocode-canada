@@ -5,7 +5,7 @@ async function GetGeoLocationByMunicipalityProvinceSoapGo(licenseKey, isLive) {
     console.log("Address Geocode - Canada - GetGeoLocationByMunicipalityProvince - SOAP SDK");
     console.log("--------------------------------------------------------------------------");
 
-    const municipality = "Ottawa";
+    const municipality = "Kitchener";
     const province = "ON";
     const timeoutSeconds = 15;
 

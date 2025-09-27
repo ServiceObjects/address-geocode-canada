@@ -12,7 +12,6 @@ def get_postal_code_info_rest_sdk_go(is_live: bool, license_key: str) -> None:
     print("-------------------------------------------------------")
 
     postal_code = "K1Y 4E9"
-    timeout_seconds = 15
 
     print("\r\n* Input *\r\n")
     print(f"PostalCode : {postal_code}")

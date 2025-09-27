@@ -5,7 +5,7 @@ async function GetGeoLocationByMunicipalityProvinceRestGo(licenseKey, isLive) {
     console.log("Address Geocode - Canada - GetGeoLocationByMunicipalityProvince - REST SDK");
     console.log("--------------------------------------------------------------------------");
 
-    const municipality = "Ottawa";
+    const municipality = "Kitchener";
     const province = "ON";
     const timeoutSeconds = 15;
 

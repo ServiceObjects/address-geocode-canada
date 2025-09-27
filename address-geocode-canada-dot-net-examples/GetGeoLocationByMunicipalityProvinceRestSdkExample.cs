@@ -5,7 +5,7 @@ namespace address_geocode_canada_dot_net_examples
 {
     public class GetGeoLocationByMunicipalityProvinceRestSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n--------------------------------------------------------------------------");
             Console.WriteLine("Address Geocode – Canada - GetGeoLocationByMunicipalityProvince - REST SDK");
@@ -14,8 +14,8 @@ namespace address_geocode_canada_dot_net_examples
             GetGeoLocationByMunicipalityProvinceClient.GetGeoLocationByMunicipalityProvinceInput getGeoLocationByMunicipalityProvinceInput = new(
                 Municipality: "Ottawa",
                 Province: "ON",
-                LicenseKey: licenseKey,
-                IsLive: isLive,
+                LicenseKey: LicenseKey,
+                IsLive: IsLive,
                 TimeoutSeconds: 15
             );
 

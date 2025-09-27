@@ -24,15 +24,15 @@ This operation requires the Address value, and either Municipality and Province,
 // 1. Build the input
 //
 //  Required fields:
-//               Municipality 
-//               Province
-//               PostalCode
-//               LicenseKey
-//               IsLive
+//               address
+//               municipality 
+//               province
+//               postalCode
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        Address
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetGeoLocationSoap } from "../address-geocode-canada-nodejs/SOAP/get_geo_location_soap.js";
 
@@ -41,6 +41,8 @@ const municipality = "Ottawa";
 const province = "ON";
 const postalCode = "K1Z 7K4";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync Invoke() method.
 const agca = new GetGeoLocationSoap(address, municipality, province, postalCode, licenseKey, isLive, timeoutSeconds);
@@ -81,17 +83,19 @@ This operation is almost exactly like GetGeoLocation, but rather than geocoding 
 // 1. Build the input
 //
 //  Required fields:
-//               PostalCode
-//               LicenseKey
-//               IsLive
+//               postalCode
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetPostalCodeInfoSoap } from "../address-geocode-canada-nodejs/SOAP/get_postal_code_info_soap.js";
 
 const postalCode = "K1Y 4E9";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync Invoke() method.
 const agca = new GetPostalCodeInfoSoap(postalCode, licenseKey, isLive, timeoutSeconds);
@@ -136,21 +140,21 @@ This operation is almost exactly like GetGeoLocation except that it provides lat
 // 1. Build the input
 //
 //  Required fields:
-//               Municipality 
-//               Province
-//               PostalCode
-//               LicenseKey
-//               IsLive
+//               municipality 
+//               province
+//               licenseKey
+//               isLive
 // 
 // Optional:
-//        Address
-//        TimeoutSeconds (default: 15)
+//        timeoutSeconds
 
 import { GetGeoLocationByMunicipalityProvinceSoap } from "../address-geocode-canada-nodejs/SOAP/get_geo_location_by_municipality_province_soap.js";
 
 const municipality = "Ottawa";
 const province = "ON";
 const timeoutSeconds = 15;
+const isLive = true;
+const licenseKey = "YOUR LICENSE KEY";
 
 // 2. Call the sync Invoke() method.
 const agca = new GetGeoLocationByMunicipalityProvinceSoap(municipality, province, licenseKey, isLive, timeoutSeconds);

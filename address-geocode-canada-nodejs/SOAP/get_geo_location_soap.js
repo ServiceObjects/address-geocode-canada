@@ -1,5 +1,4 @@
 import { soap } from 'strong-soap';
-import { GetGeoLocationResponse } from './agca_response.js';
 
 /**
  * <summary>
@@ -92,8 +91,7 @@ class GetGeoLocationSoap {
                         if (!rawData) {
                             return reject(new Error("SOAP response is empty or undefined."));
                         }
-                        const parsed = new GetGeoLocationResponse(rawData);
-                        resolve(parsed);
+                        resolve(rawData);
                     } catch (parseErr) {
                         reject(new Error(`Failed to parse SOAP response: ${parseErr.message}`));
                     }

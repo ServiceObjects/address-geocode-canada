@@ -28,10 +28,12 @@
     <Folder Include="SOAP\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="REST\manifest.csv" />
     <Content Include="REST\readme.md" />
     <Content Include="SOAP\get_geo_location_by_municipality_province_soap.py" />
     <Content Include="SOAP\get_geo_location_soap.py" />
     <Content Include="SOAP\get_postal_code_info_soap.py" />
+    <Content Include="SOAP\manifest.csv" />
     <Content Include="SOAP\readme.md" />
   </ItemGroup>
   <ItemGroup>

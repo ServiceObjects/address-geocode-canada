@@ -24,23 +24,21 @@ This operation requires the Address value, and either Municipality and Province,
 # 1. Build the input
 #
 #  Required fields:
-#               Municipality 
-#               Province
-#               PostalCode
-#               LicenseKey
-#               IsLive
-# 
-# Optional:
-#        Address
-#        TimeoutSeconds (default: 15)
+#               address
+#               municipality 
+#               province
+#               postal_code
+#               license_key
+#               is_live
 
 from get_geo_location_rest import get_geo_location
 
 address = "1053 Carling Ave";
 municipality = "Ottawa";
 province = "ON";
-postalCode = "K1Z 7K4";
-timeoutSeconds = 15;
+postal_code = "K1Z 7K4";
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the method.
   response = get_geo_location(address, municipality, province, postal_code, license_key, is_live)
@@ -73,17 +71,15 @@ This operation is almost exactly like GetGeoLocation, but rather than geocoding 
 # 1. Build the input
 #
 #  Required fields:
-#               PostalCode
-#               LicenseKey
-#               IsLive
-# 
-# Optional:
-#        TimeoutSeconds (default: 15)
+#               postal_code
+#               license_key
+#               is_live
 
 from get_postal_code_info_rest import get_postal_code_info
 
-postalCode = "K1Y 4E9";
-timeoutSeconds = 15;
+postal_code = "K1Y 4E9";
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync Invoke() method.
   response = get_postal_code_info(postal_code, license_key, is_live)
@@ -121,24 +117,20 @@ This operation is almost exactly like GetGeoLocation except that it provides lat
 # 1. Build the input
 #
 #  Required fields:
-#               Municipality 
-#               Province
-#               PostalCode
-#               LicenseKey
-#               IsLive
-# 
-# Optional:
-#        Address
-#        TimeoutSeconds (default: 15)
+#               municipality 
+#               province
+#               license_key
+#               is_live
 
 from get_geo_location_by_municipality_province_rest import get_geo_location_by_municipality_province
 
 municipality = "Ottawa";
 province = "ON";
-timeoutSeconds = 15;
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync Invoke() method.
-  response = get_geo_location_by_municipality_province(municipality, province, license_key, is_live)
+response = get_geo_location_by_municipality_province(municipality, province, license_key, is_live)
 
 # 3. Inspect results.
 if response and not response.Error:

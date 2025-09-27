@@ -1,10 +1,11 @@
 ﻿using address_geocode_canada_dot_net.REST;
+using System.ComponentModel;
 
 namespace address_geocode_ca_dot_net_examples
 {
     public class GetGeoLocationRestSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n----------------------------------------------------");
             Console.WriteLine("Address Geocode – Canada - GetGeoLocation - REST SDK");
@@ -15,8 +16,8 @@ namespace address_geocode_ca_dot_net_examples
                 Municipality: "Ottawa",
                 Province: "ON",
                 PostalCode: "K1Y 4E9",
-                LicenseKey: licenseKey,
-                IsLive: isLive,
+                LicenseKey: LicenseKey,
+                IsLive: IsLive,
                 TimeoutSeconds: 15
             );
 

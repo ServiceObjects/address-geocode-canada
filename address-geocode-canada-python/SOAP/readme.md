@@ -24,23 +24,25 @@ This operation requires the Address value, and either Municipality and Province,
 # 1. Build the input
 #
 #  Required fields:
-#               Municipality 
-#               Province
-#               PostalCode
-#               LicenseKey
-#               IsLive
+#               address
+#               municipality 
+#               province
+#               postal_code
+#               license_key
+#               is_live
 # 
 # Optional:
-#        Address
-#        TimeoutSeconds (default: 15)
+#        timeout_seconds
 
 from get_geo_location_soap import GetGeoLocationSoap
 
 address = "1053 Carling Ave";
 municipality = "Ottawa";
 province = "ON";
-postalCode = "K1Z 7K4";
-timeoutSeconds = 15;
+postal_code = "K1Z 7K4";
+timeout_seconds = 15;
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the method.
 service = GetGeoLocationSoap(license_key, is_live, timeout_seconds)
@@ -74,17 +76,19 @@ This operation is almost exactly like GetGeoLocation, but rather than geocoding 
 # 1. Build the input
 #
 #  Required fields:
-#               PostalCode
-#               LicenseKey
-#               IsLive
+#               postal_code
+#               license_key
+#               is_live
 # 
 # Optional:
-#        TimeoutSeconds (default: 15)
+#        timeout_seconds
 
 from get_postal_code_info_soap import GetPostalCodeInfoSoap
 
-postalCode = "K1Y 4E9";
-timeoutSeconds = 15;
+postal_code = "K1Y 4E9";
+timeout_seconds = 15;
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync Invoke() method.
 service = GetPostalCodeInfoSoap(license_key, is_live, timeout_seconds)
@@ -123,21 +127,21 @@ This operation is almost exactly like GetGeoLocation except that it provides lat
 # 1. Build the input
 #
 #  Required fields:
-#               Municipality 
-#               Province
-#               PostalCode
-#               LicenseKey
-#               IsLive
+#               municipality 
+#               province
+#               license_key
+#               is_live
 # 
 # Optional:
-#        Address
-#        TimeoutSeconds (default: 15)
+#        timeout_seconds
 
 from get_geo_location_by_municipality_province_soap import GetGeoLocationByMunicipalityProvinceSoap
 
 municipality = "Ottawa";
 province = "ON";
-timeoutSeconds = 15;
+timeout_seconds = 15;
+is_live = True
+license_key = "YOUR LICENSE KEY"
 
 # 2. Call the sync Invoke() method.
 service = GetGeoLocationByMunicipalityProvinceSoap(license_key, is_live, timeout_seconds)

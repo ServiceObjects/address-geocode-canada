@@ -5,10 +5,10 @@ async function GetGeoLocationSoapGo(licenseKey, isLive) {
     console.log("Address Geocode - Canada - GetGeoLocation - SOAP SDK");
     console.log("----------------------------------------------------");
 
-    const address = "1053 Carling Ave";
-    const municipality = "Ottawa";
+    const address = "50 Coach Hill Dr";
+    const municipality = "Kitchener";
     const province = "ON";
-    const postalCode = "K1Y 4E9";
+    const postalCode = "N2E 1P4";
     const timeoutSeconds = 15;
 
     console.log("\n* Input *\n");

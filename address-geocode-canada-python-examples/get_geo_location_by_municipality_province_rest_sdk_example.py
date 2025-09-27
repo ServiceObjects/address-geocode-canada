@@ -13,7 +13,6 @@ def get_geo_location_by_municipality_province_rest_sdk_go(is_live: bool, license
 
     municipality = "Ottawa"
     province = "ON"
-    timeout_seconds = 15
 
     print("\r\n* Input *\r\n")
     print(f"Municipality: {municipality}")

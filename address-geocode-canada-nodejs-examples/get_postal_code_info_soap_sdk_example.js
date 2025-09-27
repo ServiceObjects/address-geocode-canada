@@ -5,7 +5,7 @@ async function GetPostalCodeInfoSoapGo(licenseKey, isLive) {
     console.log("Address Geocode - Canada - GetPostalCodeInfo - SOAP SDK");
     console.log("-------------------------------------------------------");
 
-    const postalCode = "K1Y 4E9";
+    const postalCode = "N2E 1P4";
     const timeoutSeconds = 15;
 
     console.log("\n* Input *\n");

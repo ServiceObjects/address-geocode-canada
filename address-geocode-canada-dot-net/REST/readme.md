@@ -24,6 +24,7 @@ This operation requires the Address value, and either Municipality and Province,
 // 1. Build the input
 //
 //  Required fields:
+//               Address
 //               Municipality 
 //               Province
 //               PostalCode
@@ -31,8 +32,7 @@ This operation requires the Address value, and either Municipality and Province,
 //               IsLive
 // 
 // Optional:
-//        Address
-//        TimeoutSeconds (default: 15)
+//        TimeoutSeconds
 
 using address_geocode_canada_dot_net.REST 
 
@@ -42,7 +42,7 @@ GetGeoLocationClient.GetGeoLocationInput getGeoLocationInput = new(
     Province: "ON",
     PostalCode: "K1Y 4E9",
     LicenseKey: licenseKey,
-    IsLive: isLive,
+    IsLive: true,
     TimeoutSeconds: 15
 );
 
@@ -84,14 +84,14 @@ This operation is almost exactly like GetGeoLocation, but rather than geocoding 
 //               IsLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        TimeoutSeconds
 
 using address_geocode_us_dot_net.REST;
 
 GetPostalCodeInfoClient.GetPostalCodeInfoInput getPostalCodeInfoInput = new(
     PostalCode: "K1Y 4E9",
     LicenseKey: licenseKey,
-    IsLive: isLive,
+    IsLive: true,
     TimeoutSeconds: 15
 );
 
@@ -139,7 +139,7 @@ This operation is almost exactly like GetGeoLocation except that it provides lat
 //               IsLive
 // 
 // Optional:
-//        TimeoutSeconds (default: 15)
+//        TimeoutSeconds
 
 using address_geocode_us_dot_net.REST;
 
@@ -147,7 +147,7 @@ GetGeoLocationByMunicipalityProvinceClient.GetGeoLocationByMunicipalityProvinceI
     Municipality: "Ottawa",
     Province: "ON",
     LicenseKey: licenseKey,
-    IsLive: isLive,
+    IsLive: true,
     TimeoutSeconds: 15
 );
 

@@ -5,7 +5,7 @@ namespace address_geocode_ca_dot_net_examples
 {
     public static class GetGeoLocationByMunicipalityProvinceSoapSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n--------------------------------------------------------------------------");
             Console.WriteLine("Address Geocode – Canada - GetGeoLocationByMunicipalityProvince - SOAP SDK");
@@ -17,12 +17,12 @@ namespace address_geocode_ca_dot_net_examples
             Console.WriteLine("\r\n* Input *\r\n");
             Console.WriteLine($"Municipality: {Municipality}");
             Console.WriteLine($"Province    : {Province}");
-            Console.WriteLine($"License Key : {licenseKey}");
-            Console.WriteLine($"Is Live     : {isLive}");
+            Console.WriteLine($"License Key : {LicenseKey}");
+            Console.WriteLine($"Is Live     : {IsLive}");
 
-            GetGeoLocationByMunicipalityProvinceValidation getGeoLocationByMunicipalityProvinceValidation = new(isLive);
+            GetGeoLocationByMunicipalityProvinceValidation getGeoLocationByMunicipalityProvinceValidation = new(IsLive);
 
-            Location response = getGeoLocationByMunicipalityProvinceValidation.GetGeoLocationByMunicipalityProvince(Municipality, Province, licenseKey).Result;
+            Location response = getGeoLocationByMunicipalityProvinceValidation.GetGeoLocationByMunicipalityProvince(Municipality, Province, LicenseKey).Result;
 
             if (response.Error is null)
             {

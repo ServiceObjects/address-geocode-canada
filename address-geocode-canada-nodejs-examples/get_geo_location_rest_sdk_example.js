@@ -5,10 +5,10 @@ async function GetGeoLocationRestGo(licenseKey, isLive) {
     console.log("Address Geocode - Canada - GetGeoLocation - REST SDK");
     console.log("----------------------------------------------------");
 
-    const address = "1053 Carling Ave";
-    const municipality = "Ottawa";
+    const address = "50 Coach Hill Dr";
+    const municipality = "Kitchener";
     const province = "ON";
-    const postalCode = "K1Z 7K4";
+    const postalCode = "N2E 1P4";
     const timeoutSeconds = 15;
 
     console.log("\n* Input *\n");

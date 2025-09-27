@@ -5,7 +5,7 @@ namespace address_geocode_ca_dot_net_examples
 {
     public static class GetPostalCodeInfoSoapSdkExample
     {
-        public static void Go(string licenseKey, bool isLive)
+        public static void Go(string LicenseKey, bool IsLive)
         {
             Console.WriteLine("\r\n-------------------------------------------------------");
             Console.WriteLine("Address Geocode – Canada - GetPostalCodeInfo - SOAP SDK");
@@ -15,12 +15,12 @@ namespace address_geocode_ca_dot_net_examples
 
             Console.WriteLine("\r\n* Input *\r\n");
             Console.WriteLine($"Postal Code: {PostalCode}");
-            Console.WriteLine($"License Key: {licenseKey}");
-            Console.WriteLine($"Is Live    : {isLive}");
+            Console.WriteLine($"License Key: {LicenseKey}");
+            Console.WriteLine($"Is Live    : {IsLive}");
 
-            GetPostalCodeInfoValidation getPostalCodeInfoValidation = new(isLive);
+            GetPostalCodeInfoValidation getPostalCodeInfoValidation = new(IsLive);
 
-            PostalCodeInfo response = getPostalCodeInfoValidation.GetPostalCodeInfo(PostalCode, licenseKey).Result;
+            PostalCodeInfo response = getPostalCodeInfoValidation.GetPostalCodeInfo(PostalCode, LicenseKey).Result;
 
             if (response.Error is null)
             {

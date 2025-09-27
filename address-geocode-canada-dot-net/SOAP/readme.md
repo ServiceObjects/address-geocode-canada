@@ -22,26 +22,26 @@ This operation requires the Address value, and either Municipality and Province,
 
 ```
 // 1 Instantiate the service wrapper
-GetGeoLocationValidation getGeoLocationValidation = new(true);
+string IsLive = true;
+GetGeoLocationValidation getGeoLocationValidation = new(IsLive);
 
 // 2 Provide your input data
 //  Required fields:
+//               Address
 //               Municipality 
 //               Province
 //               PostalCode
 //               LicenseKey
 //               IsLive
-// 
-// Optional:
-//        Address
-//        TimeoutSeconds (default: 15)
+
 string Address = "1053 Carling Ave";
 string Municipality = "Ottawa";
 string Province = "ON";
 string PostalCode = "K1Y 4E9";
+string LicenseKey = "YOUR LICENSE KEY";
 
 // 3 Call the service
-Location response = getGeoLocationValidation.GetGeoLocation(Address, Municipality, Province, PostalCode, licenseKey).Result;
+Location response = getGeoLocationValidation.GetGeoLocation(Address, Municipality, Province, PostalCode, LicenseKey).Result;
 
 // 4. Inspect results.
 if (response.Error is null)
@@ -71,20 +71,20 @@ This operation is almost exactly like GetGeoLocation, but rather than geocoding 
 
 ```
 // 1 Instantiate the service wrapper
-GetPostalCodeInfoValidation getPostalCodeInfoValidation = new(true);
+string IsLive = true;
+GetPostalCodeInfoValidation getPostalCodeInfoValidation = new(IsLive);
 
 // 2 Provide your input data
 //  Required fields:
 //               PostalCode
 //               LicenseKey
 //               IsLive
-// 
-// Optional:
-//        TimeoutSeconds (default: 15)
+
 string PostalCode = "K1P5E3";
+string LicenseKey = "YOUR LICENSE KEY";
 
 // 3 Call the service
-PostalCodeInfo response = getPostalCodeInfoValidation.GetPostalCodeInfo(postalCode, licenseKey).Result;
+PostalCodeInfo response = getPostalCodeInfoValidation.GetPostalCodeInfo(PostalCode, LicenseKey).Result;
 
 // 4. Inspect results.
 if (response.Error is null)
@@ -119,7 +119,8 @@ This operation is almost exactly like GetGeoLocation except that it provides lat
 
 ```
 // 1 Instantiate the service wrapper
-GetGeoLocationByMunicipalityProvinceValidation getGeoLocationByMunicipalityProvinceValidation = new(true);
+string IsLive = true;
+GetGeoLocationByMunicipalityProvinceValidation getGeoLocationByMunicipalityProvinceValidation = new(IsLive);
 
 // 2 Provide your input data
 //  Required fields:
@@ -128,15 +129,13 @@ GetGeoLocationByMunicipalityProvinceValidation getGeoLocationByMunicipalityProvi
 //               PostalCode
 //               LicenseKey
 //               IsLive
-// 
-// Optional:
-//        Address
-//        TimeoutSeconds (default: 15)
+
 string Municipality = "Ottawa";
 string Province = "ON";
+string LicenseKey = "YOUR LICENSE KEY";
 
 // 3 Call the service
-Location response = getGeoLocationByMunicipalityProvinceValidation.GetGeoLocationByMunicipalityProvinceidation(Municipality, Province, licenseKey).Result;
+Location response = getGeoLocationByMunicipalityProvinceValidation.GetGeoLocationByMunicipalityProvinceidation(Municipality, Province, LicenseKey).Result;
 
 // 4. Inspect results.
 if (response.Error is null)
